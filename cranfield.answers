@@ -1,0 +1,27 @@
+1.Total number of words: 145785
+2.Total number in vocabulary: 10328
+3.Minimum number of unique words accounting for 25% of the total: 60
+4.Subset 1: Cranfield Doc1
+	Total Words = 87
+	Total Vocab = 67
+Subset 2: Creanfield Doc2
+	Total Words = 131
+	Total Vocab = 85
+
+Using the formula: V = k(n^B)
+We get two Equations:
+	67 = k(87)^B
+	85 = k(131)^B --> k = 85/131^B
+
+	67 = 85(87)^B / 131^B --> 85/67 = (131/87)^B --> ln(85/67) = B*ln(131/87)
+	B = .5813
+	K = 85/(131^.5813) = 4.99 ~ 5
+
+Estimates:
+	Corpus with 1,000,000 words ->  V= 5*(1,000,000)^(.5813) = 15373.4027 ~ 15373 words
+	Corpus with 100,000 words -> V = 5*(100,000)^(.5813) = 4031.351 ~ 4032 words
+
+
+
+
+
